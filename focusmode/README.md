@@ -1,4 +1,4 @@
-# st-w-ayfocused
+# focusmode
 A script to stay focused in the sway window manager (can be adapted for i3).
 This system consists of two parts, a script and a section in your sway config.
 "Focus Mode" will not allow you to leave a certain application. In my case it is a chromium window without a tab or url bar.
