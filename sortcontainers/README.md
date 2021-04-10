@@ -10,3 +10,6 @@ w x
 y z
 ```
 With more than four windows the script is a little wonky, I do not nessecarily plan on fixing this.
+
+## Example
+![exxample gif](sortcontainers.gif)
