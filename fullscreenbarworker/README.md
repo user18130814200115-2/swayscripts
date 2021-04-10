@@ -7,4 +7,5 @@ With fullscreenbarworker.sh in you PATH, modify `.config/sway/config` to include
 ```
 exec swayfullscreenbarworker.sh
 ```
-
+## Example
+![example gif](fullscreenbar.gif)
