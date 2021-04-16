@@ -1,9 +1,11 @@
 #!/bin/sh
 while true; do
-	swaymsg -t SUBSCRIBE '[ "window" ]' | grep "change\": \"fullscreen_mode" > /dev/null
-	
-	if [ $? -eq 0 ]
-	then
-		swaymsg -r -t get_tree | jq '.nodes[].nodes[].nodes' | grep "fullscreen_mode\": 1" && swaymsg bar mode hide || swaymsg bar mode dock
-	fi
+    message=$(swaymsg -t SUBSCRIBE '[ "window" ]') || exit
+    fullscreenmode=$(echo "$message" | grep "change\": \"fullscreen_mode" | grep -o "\"fullscreen_mode\": [0-9]")	
+
+    if [ -n "$fullscreenmode" ]; then
+	[ ${fullscreenmode##*:} -eq 1 ] && swaymsg bar mode hide
+	[ ${fullscreenmode##*:} -eq 0 ] && swaymsg bar mode dock
+    fi
 done
+
