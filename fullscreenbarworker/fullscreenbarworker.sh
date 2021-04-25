@@ -1,9 +1,17 @@
 #!/bin/sh
 
 modbar() {
-    fullscreenmode=$(echo "$1" | grep "change\": \"fullscreen_mode" | grep -o "\"fullscreen_mode\": [0-9]")	
-    [ -z "$fullscreenmode" ] && fullscreenmode=$(echo "$1" | grep "change\": \"close" | grep -o "\"fullscreen_mode\": [0-9]" | tr "1" "0")
+    change=$(echo "$1" | grep -P -o "change\":.*?,")
     
+    case "$change" in
+	*fullscreen_mode* | *focus*)
+	    fullscreenmode=$(echo "$1" | grep -o "\"fullscreen_mode\": [0-9]")	
+	;;
+	*close*)
+	    fullscreenmode=$(echo "$1" | grep -o "\"fullscreen_mode\": [0-9]" | tr "1" "0")	
+	;;
+    esac
+
     if [ -n "$fullscreenmode" ]; then
 	[ ${fullscreenmode##*:} -eq 1 ] && swaymsg bar mode hide
 	[ ${fullscreenmode##*:} -eq 0 ] && swaymsg bar mode dock
