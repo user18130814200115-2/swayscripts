@@ -22,7 +22,7 @@ swaymsg "[workspace=$number]" opacity 0
 # and go there
 swaymsg workspace "$name"
 
-#Witht his line in place we can switch back the workspace to visible in case we move there differently (eg using swaybar)
+# With his line in place we can switch back the workspace to visible in case we move there differently (EG using swaybar)
 swaymsg "[workspace=$oldworkspacenumber]" opacity 1
 
 # Now fade in all the new windows
