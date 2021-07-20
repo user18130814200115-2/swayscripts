@@ -31,3 +31,4 @@ You might have to ajust some varaibles in `dynamic-tiling.sh` to for specific sc
 `dynamic-tiling-close-window.sh` closes a window and moves all the windows below it in the stack up one position.
 
 `dynamic-tiling.sh` organises the windows based on their stack position (known by their mark). This is achieved by putting all windows in floating mode so that their exact position and size can be set.
+This script can therefore easliy be modified to have different layouts using the stack position.
