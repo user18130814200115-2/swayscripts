@@ -1,6 +1,6 @@
 # Leave Empty
-Afetr quitting the last window in a workspace,
-move to the previous workspace in the list.
+After quitting the last window in a workspace,
+move to the previous workspace by number.
 
 ## NOTE
 - Quite untested
