@@ -1,7 +1,7 @@
 #!/bin/sh
 
 id=$(shuf -i 1-9999 -n 1)
-swaymsg '[con_mark=fade]' "mark $id; unmark fade"
+swaymsg '[con_mark=fade]' "mark $id"
     
 for i in `seq 30`; do
     sleep 0.001
