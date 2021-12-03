@@ -10,6 +10,6 @@ Add the lines from`sway.config` to your sway config file or `include` them and h
 ![example gif2](fadeout.gif)
 
 ## Fadefix
-There is an ocasional issue (#2) especially on slower devices where sway does not properly mark new windows,
+There is an ocasional issue ([#2](https://github.com/user18130814200115-2/swayscrips/issues/2)) especially on slower devices where sway does not properly mark new windows,
 making them remain transparent.
 This script runs constantly in the background to fix this issue.
