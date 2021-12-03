@@ -9,4 +9,3 @@ for i in `seq 30`; do
 done
     
 swaymsg "[con_mark=$id]" opacity 1
-swaymsg "[con_mark=$id]" unmark "$id"
