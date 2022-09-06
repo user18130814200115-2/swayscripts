@@ -1,5 +1,5 @@
 # swaymousefocus
-Move the cursor to the center of the focused window in swaywm using ydotool.
+Move the cursor to the center of the focused window in sway.
 I like to bind this to my movement keys in sway like so:
 ```
 bindsym $mod+h focus left; exec swaymousefocus.sh
