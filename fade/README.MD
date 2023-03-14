@@ -4,6 +4,7 @@ This script is alpha (get it;)) at best, you may encounter issues.
 
 ## Usage
 Add the lines from`sway.config` to your sway config file or `include` them and have `fadein.sh` and `fadeout.sh` in you `PATH`. Alternatively, you can just use either fade in or fade out.
+You can tweak values of `FPS` and `TIME_S` to ajdust smoothness and time interval of the fade respectively.
 
 ## Example
 ![example gif](fade.gif)
