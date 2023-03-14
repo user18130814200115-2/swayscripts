@@ -4,6 +4,9 @@ This script is alpha (get it;)) at best, you may encounter issues.
 
 ## Usage
 Add the lines from`sway.config` to your sway config file or `include` them and have `fadein.sh` and `fadeout.sh` in you `PATH`. Alternatively, you can just use either fade in or fade out.
+In `fadein.sh` and `fadeout.sh`, you can adjust the variables `FPS` and `TIME_S`.
+A value for `FPS` results in a smoother fade with more intermediary steps.
+A higher `TIME_S` makes the fade last longer.
 
 ## Example
 ![example gif](fade.gif)
